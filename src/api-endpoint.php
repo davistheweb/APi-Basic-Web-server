@@ -55,7 +55,7 @@ $WeatherApiKey = '3dfb9919a4259f4cc65c6db7a0a6b35b';
 $WeatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q={$UserCity}&appid={$WeatherApiKey}&units=metric";
 $WeatherData = json_decode(file_get_contents($WeatherApiUrl), true);
 
-$UserLocationTemp = isset($WeatherData['main']['temp']) ? $WeatherData['main']['temp'] : 'Unknown';
+$UserLocationTemp = isset($WeatherData['main']['temp']) ? $WeatherData['main']['temp'] : '(Not found)';
 
 
 $greet = "Hey, $userName !, the temperature is $UserLocationTemp degrees Celsius in $UserCity";
